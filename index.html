@@ -56,7 +56,20 @@
     <a href="https://yunfengsay.github.io/post/jison/">Jison</a>
   </h1>
   <time datetime="2018-10-15T21:04:40&#43;0800" class="post-date">Mon, Oct 15, 2018</time>
-   jison概述 
+  jison概述 什么是jison？
+在聊jison前我们得先说下bison和flex这两个工具
+Flex是一个词法分析器，是unix lex的gnu克隆，作用是把&quot;词&quot;抽象成符号，供程序识别 Bison则是一个文法分析器（也是unix yacc的gnu克隆），语法就是在这里定义，是语言设计的核心 这两巨头不但可以应付复杂的语法处理，也可以拿来制作简单的分析器，如配置文件等  而jison是bison的js实现（Jison generates bottom-up parsers in JavaScript）
+jiosn的github地址在这里github，在examples下有很多作者写的demo教程。
+jison做了什么 先不直接回答这个问题，我们从一个经典的需求说起 &mdash; “实现一个计算器”
+2*(5+2)/3  不是简单的调用下eval这么简单，我们要重头开始审视这个问题，优先级、四则符号、括号，这些就是我们要考虑的东西。
+那么如何实现这个需求呢，拆分问题，我们人的思维是擅长把部分合成整体看待从而简化问题，首先拆分第一步
+2*(5+2)/3 ----&gt; 2*(5+2) / 3 相当于 let a = 22*(5+2); let b = 3 ; result = a / b (5+2)/3 ---&gt; (5+2) / 3; 相当于 let c = (5+2) ; let d = 3; .....  最后计算， 详细逻辑可以参考别人的这篇文章 解析树及树的遍历
+现在我们用jison来实现这个需求
+第一步： 安装jison 新建 calculator.jison文件
+  
+  <div class="read-more-link">
+    <a href="/post/jison/">Read More…</a>
+  </div>
   
 </article><article class="post">
   <h1 class="post-title">
