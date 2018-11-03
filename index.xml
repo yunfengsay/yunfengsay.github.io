@@ -6,10 +6,38 @@
     <description>Recent content on 自留地</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 15 Oct 2018 21:04:40 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 03 Nov 2018 23:22:09 +0800</lastBuildDate>
     
 	<atom:link href="https://yunfengsay.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Linux_info</title>
+      <link>https://yunfengsay.github.io/post/linux_info/</link>
+      <pubDate>Sat, 03 Nov 2018 23:22:09 +0800</pubDate>
+      
+      <guid>https://yunfengsay.github.io/post/linux_info/</guid>
+      <description>系统
+# uname -a # 查看内核/操作系统/CPU信息 # head -n 1 /etc/issue # 查看操作系统版本 # cat /proc/cpuinfo # 查看CPU信息 # hostname # 查看计算机名 # lspci -tv # 列出所有PCI设备 # lsusb -tv # 列出所有USB设备 # lsmod # 列出加载的内核模块 # env # 查看环境变量  资源
+# free -m # 查看内存使用量和交换区使用量 # df -h # 查看各分区使用情况 # du -sh &amp;lt;目录名&amp;gt; # 查看指定目录的大小 # grep MemTotal /proc/meminfo # 查看内存总量 # grep MemFree /proc/meminfo # 查看空闲内存量 # uptime # 查看系统运行时间、用户数、负载 # cat /proc/loadavg # 查看系统负载  磁盘和分区</description>
+    </item>
+    
+    <item>
+      <title>机器学习_01</title>
+      <link>https://yunfengsay.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0_01/</link>
+      <pubDate>Wed, 31 Oct 2018 10:20:57 +0800</pubDate>
+      
+      <guid>https://yunfengsay.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0_01/</guid>
+      <description>pytorch squeeze(挤，压榨) 方法 除size为1的维度，包括行和列。至于维度大于等于2时，squeeze()不起作用。
+batchsize 批大小。在深度学习中，一般采用SGD训练，即每次训练在训练集中取batchsize个样本训练；
+iteration 1个iteration等于使用batchsize个样本训练一次；
+epoch 1个epoch等于使用训练集中的全部样本训练一次；
+举个例子，训练集有1000个样本，batchsize=10，那么： 训练完整个样本集需要： 100次iteration，1次epoch  learning rate 学习率 (learning rate)，控制 模型的 学习进度 ：
+lr 即 stride (步长) ，即反向传播算法中的 ηη ：
+ωn←ωn−η∂L∂ωn
+   学习率 大 学习率 小      学习速度 快 慢   使用时间点 刚开始训练时 一定轮数过后   副作用 1.易损失值爆炸；2.易振荡。 1.易过拟合；2.收敛速度慢。    学习率设置 在训练过程中，一般根据训练轮数设置动态变化的学习率。
+ 刚开始训练时：学习率以 0.01 ~ 0.001 为宜。 一定轮数过后：逐渐减缓。 接近训练结束：学习速率的衰减应该在100倍以上。  Note： 如果是 迁移学习 ，由于模型已在原始数据上收敛，此时应设置较小学习率 (≤10−4≤10−4) 在新数据上进行 微调 。</description>
+    </item>
     
     <item>
       <title>Jison</title>
@@ -36,17 +64,6 @@ jison做了什么 先不直接回答这个问题，我们从一个经典的需�
       
       <guid>https://yunfengsay.github.io/about/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://yunfengsay.github.io/post/%E6%9F%A5%E7%9C%8Blinux%E4%BF%A1%E6%81%AF/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://yunfengsay.github.io/post/%E6%9F%A5%E7%9C%8Blinux%E4%BF%A1%E6%81%AF/</guid>
-      <description>系统
-# uname -a # 查看内核/操作系统/CPU信息 # head -n 1 /etc/issue # 查看操作系统版本 # cat /proc/cpuinfo # 查看CPU信息 # hostname # 查看计算机名 # lspci -tv # 列出所有PCI设备 # lsusb -tv # 列出所有USB设备 # lsmod # 列出加载的内核模块 # env # 查看环境变量  资源
-# free -m # 查看内存使用量和交换区使用量 # df -h # 查看各分区使用情况 # du -sh &amp;lt;目录名&amp;gt; # 查看指定目录的大小 # grep MemTotal /proc/meminfo # 查看内存总量 # grep MemFree /proc/meminfo # 查看空闲内存量 # uptime # 查看系统运行时间、用户数、负载 # cat /proc/loadavg # 查看系统负载  磁盘和分区</description>
     </item>
     
   </channel>
